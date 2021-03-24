@@ -18,6 +18,7 @@ public class NewHibernateUtil {
 
     private static final SessionFactory sessionFactory;
     
+    //asdfas
     static {
         try {
             // Create the SessionFactory from standard (hibernate.cfg.xml) 
