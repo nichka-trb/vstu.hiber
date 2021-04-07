@@ -26,6 +26,8 @@ public class JavaApplication10 {
         Query query =  s.createQuery(hql);
         List <Studentyi> students = query.list();
        
+        
+        
         /* for(int i = 0; i < students.size(); i++){
         System.out.println(students.get(i).getFamiliya() +"\t " +students.get(i).getImya() 
                             +" " + students.get(i).getOtchestvo() +"\t " + students.get(i).getGruppyi().getNazvanie());
