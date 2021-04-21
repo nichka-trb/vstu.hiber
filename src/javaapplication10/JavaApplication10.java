@@ -8,14 +8,7 @@ package javaapplication10;
 import entity.Studentyi;
 import Hiber.NewHibernateUtil;
 import entity.Gruppyi;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.stream.Collectors;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -27,6 +20,7 @@ public class JavaApplication10 {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) {
       SessionFactory sf = NewHibernateUtil.getSessionFactory();
         Session s = sf.openSession();
