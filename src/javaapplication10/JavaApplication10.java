@@ -35,12 +35,14 @@ public class JavaApplication10 {
         List <Studentyi> stds = query.list();
         List <Gruppyi> grup = query1.list();
         System.out.println("Задание 1. Вариант 9");
-        for(Studentyi st: stds){
+       for(Studentyi st: stds){
             System.out.println(st.getFamiliya() + " " + st.getImya() + " " + st.getOtchestvo() +
-                    " учится в группе " + st.getGruppyi().getNazvanie());
-                   }
+                    " study in " + st.getGruppyi().getNazvanie());
+        }
         System.out.println("Задание 2. Вариант 9");
         for(Gruppyi g: grup){
-            System.out.println("Группа " + g.getNazvanie() + " имеет " + g.getStudentyis().size() + " студента(ов).");
-        }  }
+            System.out.println("Group " + g.getNazvanie() + " includes " + g.getStudentyis().size() + " students.");
+        } 
     }
+}
+    
