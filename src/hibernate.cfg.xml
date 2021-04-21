@@ -46,7 +46,7 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/gr?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">root</property>
-    <mapping class="Hiber.entity.Studentyi"/>
-    <mapping class="Hiber.entity.Gruppyi"/>
+    <mapping resource="entity/Studentyi.hbm.xml"/>
+    <mapping resource="entity/Gruppyi.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

@@ -5,12 +5,21 @@
  */
 package javaapplication10;
 
-import hiber.entity.Studentyi;
+import entity.Studentyi;
 import Hiber.NewHibernateUtil;
+import entity.Gruppyi;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+import java.util.stream.Collectors;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Query;
+
 
 
 public class JavaApplication10 {
@@ -21,17 +30,17 @@ public class JavaApplication10 {
     public static void main(String[] args) {
       SessionFactory sf = NewHibernateUtil.getSessionFactory();
         Session s = sf.openSession();
-        String hql = "FROM Studentyi";
-       // String hql = "FROM Gruppyi WHERE nazvanie like 'A-%' ";
-        Query query =  s.createQuery(hql);
-        List <Studentyi> students = query.list();
-       
-        
-        
-        /* for(int i = 0; i < students.size(); i++){
-        System.out.println(students.get(i).getFamiliya() +"\t " +students.get(i).getImya() 
-                            +" " + students.get(i).getOtchestvo() +"\t " + students.get(i).getGruppyi().getNazvanie());
-        }*/
+        Query query = s.createQuery("From Studentyi");
+        Query query1 = s.createQuery("From Gruppyi");
+        List <Studentyi> stds = query.list();
+        List <Gruppyi> grup = query1.list();
+        System.out.println("Задание 1. Вариант 9");
+        for(Studentyi st: stds){
+            System.out.println(st.getFamiliya() + " " + st.getImya() + " " + st.getOtchestvo() +
+                    " учится в группе " + st.getGruppyi().getNazvanie());
+                   }
+        System.out.println("Задание 2. Вариант 9");
+        for(Gruppyi g: grup){
+            System.out.println("Группа " + g.getNazvanie() + " имеет " + g.getStudentyis().size() + " студента(ов).");
+        }  }
     }
-    
-}
